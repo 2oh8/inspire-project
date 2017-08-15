@@ -1,0 +1,63 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inspire</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="body">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<p class="card center-align hoverable" id="clock"></p>
+				<div class="col s5">
+					<div class="col s12 card hoverable" id="weather">
+					</div>
+					<div class="col s12 card hoverable" id="todocard">
+						<h3>To-dos</h3>
+						<form onsubmit="app.controllers.todoController.addTodo(event)">
+							<input type="text" name="title" placeholder="Title">
+							<button class="btn" style="background: transparent" type="submit"><i class="material-icons">note_add</i></button>
+						</form>
+						<div id="todo">
+						</div>
+					</div>
+				</div>
+				<div class="col s7">
+					<div class="col s12 card hoverable" id="quote">
+					</div>
+					<div class="col s12 card hoverable" id="soundcloudplayer">
+						<iframe id="soundcloudiframe" width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/339831329&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!--JS Libraries-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+	<!--Services-->
+	<script src="app/components/weather/weather-service.js"></script>
+	<script src="app/components/image/image-service.js"></script>
+	<script src="app/components/quote/quote-service.js"></script>
+	<script src="app/components/todo/todo-service.js"></script>
+
+	<!--Controllers-->
+	<script src="app/components/weather/weather-controller.js"></script>
+	<script src="app/components/image/image-controller.js"></script>
+	<script src="app/components/quote/quote-controller.js"></script>
+	<script src="app/components/todo/todo-controller.js"></script>
+
+	<!--Initialize App-->
+	<script src="app/init.js"></script>
+</body>
+
+</html>

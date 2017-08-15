@@ -1,0 +1,114 @@
+body {
+    height: 100%;
+    size: cover;
+    position: center center fixed;
+    background-repeat: no-repeat;
+    padding-bottom: 24rem; 
+}
+
+#clock {
+    margin-top: 18vh;
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 200;
+    color: white;
+    font-size: 8vw;
+    background-color:rgba(0, 0, 0, 0.75);
+}
+
+#weather {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 200;
+    color: white;
+    font-size: 2vw;
+    background-color:rgba(0, 0, 0, 0.75);
+    line-height: .5vh;
+}
+
+#quote {
+    font-family: "Roboto";
+    font-style: italic;
+    /* font-weight: 200; */
+    color: white;
+    background-color:rgba(0, 0, 0, 0.75);
+    
+}
+
+#quote .author {
+    display: none;
+    animation: flipInX 1500ms;
+}
+
+#quote:hover .author {
+    display: block;
+    transition-duration: 1000ms;
+}
+
+#todocard {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 200;
+    color: white;
+    font-size: 2vw;
+    background-color:rgba(0, 0, 0, 0.75);
+    
+}
+
+#todo {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 200;
+    color: white;
+    font-size: 3vw;
+}
+
+#soundcloudplayer {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 200;
+    color: white;
+    font-size: 2vw;
+    background-color:rgba(0, 0, 0, 0.75);
+}
+
+#soundcloudiframe {
+    padding: 1rem;
+}
+
+
+.inner-card {
+    background-color: transparent;
+    height: 10rem;
+    line-height: .5vh;
+}
+.weather-icon {
+    margin-top: 1vw;
+}
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
